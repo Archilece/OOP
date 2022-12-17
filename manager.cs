@@ -1,7 +1,7 @@
 class Manager : person
 {
     int managerID;
-
+    
     public void managerStart()
     {
         int choice = 0;
@@ -9,6 +9,7 @@ class Manager : person
         Console.WriteLine("        Manager Controls       ");
         Console.WriteLine("Press [1] For Manager 1 Control");
         Console.WriteLine("Press [2] For Manager 2 Control");
+        
         choice = Convert.ToInt32(Console.ReadLine());
         if(choice == 1)
         {
@@ -33,7 +34,7 @@ class Manager : person
     public void manager1Cont(int managerID)
     {
         int choice = 0;
-
+        programStart ps = new programStart(); 
          if(!File.Exists("M" +  managerID))
         {
             Console.WriteLine("Manager 1 Account Does not Exist");
@@ -89,7 +90,6 @@ class Manager : person
             case 3:
                 //SEE Client TEXT FILES and Update With Client Request: 
                 see();
-                
                 break;
         }
         
@@ -166,7 +166,6 @@ class Manager : person
 
     public void createSAccount()
     {
-        // string? staffId;
         Console.WriteLine("Create New Staff ID");
         int staffId = 0;
         staffId = Convert.ToInt32(Console.ReadLine());
@@ -243,7 +242,7 @@ class Manager : person
         {
         Console.WriteLine(tr.ReadToEnd());
         }
-
+       
         Console.WriteLine("Enter Service Fee: 1 Hour (500) 1 Hour Above (1000)");
         clientFee = Convert.ToInt32(Console.ReadLine());
         
@@ -253,6 +252,51 @@ class Manager : person
         s1.WriteLine("Client Fee: " + clientFee);
         s1.Close();
         f1.Close();
+
+        if(File.Exists("h" + clientId))
+        {
+            FileStream f2 = new FileStream("h" + clientId, FileMode.Append);
+            StreamWriter s2 = new StreamWriter(f2);
+            s2.WriteLine("Client Fee: " + clientFee);
+            s2.Close();
+            f2.Close();
+        }
+      }
+      else
+      {
+        Console.WriteLine("Client ID Does Not Exist");
+        see();
       }
     }
+
+    public void payment()
+    {
+        int clientId = 0;
+        int paymentN;
+        Console.WriteLine("500 1 Hour 1000 1 Hour Above");
+        Console.WriteLine("============================");
+        Console.WriteLine("Enter Your Client ID: ");
+        clientId = Convert.ToInt32(Console.ReadLine());
+        
+
+        if(File.Exists("c" + clientId))
+        { 
+            Console.WriteLine("Enter Cash To Pay: ");
+            paymentN = Convert.ToInt32(Console.ReadLine());
+            FileStream fs = new FileStream("h" + clientId ,FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine("Client ID: " + clientId);
+            sw.WriteLine("Paid In: " + paymentN);
+            sw.Close();
+            fs.Close();
+            Console.WriteLine("You Have Paid: " + paymentN);
+        }
+        else
+        {
+            Console.WriteLine("Client ID Already Paid In");
+            payment();
+        }
+    }
+
+    
 } 
