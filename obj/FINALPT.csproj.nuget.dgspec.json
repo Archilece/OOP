@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMTEST\\C#\\FINALPT\\FINALPT.csproj": {}
+    "D:\\PROGRAMTEST\\C#\\Final\\OOP\\FINALPT.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMTEST\\C#\\FINALPT\\FINALPT.csproj": {
+    "D:\\PROGRAMTEST\\C#\\Final\\OOP\\FINALPT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMTEST\\C#\\FINALPT\\FINALPT.csproj",
+        "projectUniqueName": "D:\\PROGRAMTEST\\C#\\Final\\OOP\\FINALPT.csproj",
         "projectName": "FINALPT",
-        "projectPath": "D:\\PROGRAMTEST\\C#\\FINALPT\\FINALPT.csproj",
+        "projectPath": "D:\\PROGRAMTEST\\C#\\Final\\OOP\\FINALPT.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMTEST\\C#\\FINALPT\\obj\\",
+        "outputPath": "D:\\PROGRAMTEST\\C#\\Final\\OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
