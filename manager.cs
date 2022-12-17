@@ -159,7 +159,6 @@ class Manager : person
             case 3:
                 //SEE Client TEXT FILES and Update With Client Request: 
                 see();
-                
                 break;
         }   
         }
@@ -234,11 +233,26 @@ class Manager : person
     public void see()
     {
       int clientId = 0;
+      int clientFee = 0;
       Console.WriteLine("Enter Client ID to View");
       clientId = Convert.ToInt32(Console.ReadLine());
-      using (TextReader tr = File.OpenText("c" + clientId))
+      if(File.Exists("c" + clientId))
       {
-      Console.WriteLine(tr.ReadToEnd());
+        
+        using (TextReader tr = File.OpenText("c" + clientId))
+        {
+        Console.WriteLine(tr.ReadToEnd());
+        }
+
+        Console.WriteLine("Enter Service Fee: 1 Hour (500) 1 Hour Above (1000)");
+        clientFee = Convert.ToInt32(Console.ReadLine());
+        
+
+        FileStream f1 = new FileStream("c" + clientId, FileMode.Append);
+        StreamWriter s1 = new StreamWriter(f1);
+        s1.WriteLine("Client Fee: " + clientFee);
+        s1.Close();
+        f1.Close();
       }
     }
-    } 
+} 
