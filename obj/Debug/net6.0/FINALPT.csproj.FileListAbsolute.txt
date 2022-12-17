@@ -1,0 +1,15 @@
+D:\PROGRAMTEST\C#\FINALPT\bin\Debug\net6.0\FINALPT.exe
+D:\PROGRAMTEST\C#\FINALPT\bin\Debug\net6.0\FINALPT.deps.json
+D:\PROGRAMTEST\C#\FINALPT\bin\Debug\net6.0\FINALPT.runtimeconfig.json
+D:\PROGRAMTEST\C#\FINALPT\bin\Debug\net6.0\FINALPT.dll
+D:\PROGRAMTEST\C#\FINALPT\bin\Debug\net6.0\FINALPT.pdb
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.csproj.AssemblyReference.cache
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.AssemblyInfoInputs.cache
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.AssemblyInfo.cs
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.csproj.CoreCompileInputs.cache
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.dll
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\refint\FINALPT.dll
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.pdb
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\FINALPT.genruntimeconfig.cache
+D:\PROGRAMTEST\C#\FINALPT\obj\Debug\net6.0\ref\FINALPT.dll
