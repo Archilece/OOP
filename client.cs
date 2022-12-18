@@ -26,7 +26,7 @@ class client : person
                 break;
 
             case 3:
-                mng.payment();
+                payment();
                 break;
             case 4:
                 Environment.Exit(0);
@@ -61,17 +61,25 @@ class client : person
 
     public void createCAccount()
     {
-        
+        int choice =0;
         Console.WriteLine("Create New Client ID");
         clientId = Convert.ToInt16(Console.ReadLine());
         
         if(File.Exists("c" + clientId))
         {
-            Console.WriteLine("Client ID already Taken");
-            createCAccount();
+            Console.WriteLine("Client ID already");
+            Console.WriteLine("Overwrite? [1] YES || [2] NO");
+            choice = Convert.ToInt16(Console.ReadLine());
+            if(choice == 1)
+            {
+                File.Delete("c" + clientId);
+            }
+            else if(choice == 2)
+            {
+                createCAccount();
+            }
         }
-        else
-        {   
+         
             FileStream fs = new FileStream("c" + clientId ,FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
 
@@ -98,6 +106,61 @@ class client : person
             Console.WriteLine("Client Account Created");
             Console.WriteLine("-------------------------");
            
+        
+    }
+
+    public void payment()
+    {
+        int clientId = 0;
+        int payHr = 500;
+        int paymentN;
+        int hour;
+        int change;
+        Console.WriteLine("1 Hour Is 500");
+        Console.WriteLine("============================");
+        Console.WriteLine("Enter Your Client ID: ");
+        clientId = Convert.ToInt32(Console.ReadLine());
+        
+
+        if(File.Exists("c" + clientId))
+        { 
+            Console.WriteLine("Enter How Many Hours Of Service");
+            hour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Payment: ");
+            paymentN = Convert.ToInt32(Console.ReadLine());
+            change = paymentN - payHr * hour;
+            if(paymentN >= payHr)
+            {
+
+            FileStream fs = new FileStream("h" + clientId ,FileMode.OpenOrCreate);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine("Client ID: " + clientId);
+            sw.WriteLine("Paid In: " + paymentN);
+            sw.WriteLine("Change: " + change);
+            sw.Close();
+            fs.Close();
+            Console.WriteLine("You Have Paid: " + paymentN);
+            Console.WriteLine("Your Change: " + change);
+
+            FileStream f1 = new FileStream("c" + clientId ,FileMode.Append);
+            StreamWriter s1 = new StreamWriter(f1);
+            s1.WriteLine("Payment Paid");
+            s1.Close();
+            fs.Close();
+            }
+            else
+            {
+                Console.WriteLine("Regular Payment Starts At 500");
+                Console.WriteLine("Please Try Again");
+                payment();
+            }
+
+
+        }
+        else
+        {
+            Console.WriteLine("Client ID Already Paid In");
+            payment();
         }
     }
 }
