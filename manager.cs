@@ -157,7 +157,6 @@ class Manager : person
                 
                 break;
             case 3:
-                
                 AssignStaff();
                 break;
         }   

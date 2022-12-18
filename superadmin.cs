@@ -8,9 +8,9 @@ class superAdmin : person
         int choice = 0;
         Console.WriteLine("-------------------------");
         Console.WriteLine("Create Client Account [1]");
-        Console.WriteLine("Create Staff Account [2]");
+        Console.WriteLine("Create Staff Account  [2]");
         Console.WriteLine("Remove Client Account [3]");
-        Console.WriteLine("Remove Staff Account [4]");
+        Console.WriteLine("Remove Staff Account  [4]");
         Console.WriteLine("EXIT [5]");
         Console.WriteLine("-------------------------");
 
@@ -30,7 +30,6 @@ class superAdmin : person
             break;
             case 4: 
                  Console.WriteLine("This Is To Remove A Staff Account");
-                 staffId = Convert.ToInt16(Console.ReadLine());
                  removeStaff();
             break;
             case 5: 
