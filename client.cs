@@ -119,8 +119,14 @@ class client : person
         Console.WriteLine("============================");
         Console.WriteLine("Enter Your Client ID: ");
         clientId = Convert.ToInt32(Console.ReadLine());
+
+        if(File.Exists("h" + clientId))
+        {
+            Console.WriteLine("Client ID Already Paid In");
+            clientStart();
+        } 
         
-        if(File.Exists("c" + clientId))
+        else if(File.Exists("c" + clientId))
         { 
             Console.WriteLine("Enter How Many Hours Of Service");
             hour = Convert.ToInt32(Console.ReadLine());
@@ -151,19 +157,16 @@ class client : person
                 s1.Close();
                 fs.Close();
                 }
-                else
+               
+            }
+            else
                 {
                     Console.WriteLine("Regular Payment Starts At 500");
                     Console.WriteLine("Please Try Again");
                     payment();
-                }
-                }
-                else
-                {
-                    Console.WriteLine("Client ID Already Paid In");
-                    clientStart();
-                }
+                }     
         }
+        
         else
         {
             Console.WriteLine("Client ID Does Not Exist");
