@@ -6,7 +6,6 @@ class client : person
         int choice = 0;
         programStart pS = new programStart();
         Manager mng = new Manager();
-        
         Console.WriteLine("Welcome to Recoletos Massage Theraphy");
         Console.WriteLine("=====================================");
         Console.WriteLine("[1] Create Account");
@@ -33,31 +32,6 @@ class client : person
                 break;
         }
     }
-    // public void requestService()
-    // {
-    //     string? clientRequest;
-    //     Console.WriteLine("Request");
-    //     Console.WriteLine("===============");
-    //     Console.WriteLine("Enter Client ID");
-    //     clientId = Convert.ToInt16(Console.ReadLine());
-        
-    //     if(File.Exists("c" + clientId))
-    //     {   
-    //         Console.WriteLine("Enter Your Request And Hour Of Service: ");
-    //         clientRequest = Console.ReadLine();
-
-    //         FileStream f1 = new FileStream("c" + clientId, FileMode.Append);
-    //         StreamWriter s1 = new StreamWriter(f1);
-    //         s1.WriteLine("Client Request: " + clientRequest);
-    //         s1.Close();
-    //         f1.Close();
-    //     }
-    //     else
-    //     {
-    //         Console.WriteLine("Invalid Client ID");
-    //         clientStart();
-    //     }
-    // }
 
     public void createCAccount()
     {

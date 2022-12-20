@@ -74,19 +74,12 @@ class Staff : person
 
                 File.Copy(@"h" + clientId, @"hc" + clientId);
                 File.Delete("h"+clientId);
-
-
-
                 seeInfo(staffID);
             }
 
             if (choice == 2)
             {
                 seeInfo(staffID);
-
-
-
-
             }
 
         }

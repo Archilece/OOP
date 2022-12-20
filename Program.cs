@@ -29,14 +29,13 @@ class programStart
 
             case 3:
                 stf.staffStart();
-
                 break;
 
             case 4:
                 clt.clientStart();
                 break;
-
         }
     }
+
 
 }

@@ -76,6 +76,7 @@ class Manager : person
             Console.WriteLine("[1]Hire Staff");
             Console.WriteLine("[2]Fire Staff");
             Console.WriteLine("[3]Assign Staff");
+            Console.WriteLine("[4]EXIT");
             choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -89,6 +90,9 @@ class Manager : person
                     break;
                 case 3:
                     AssignStaff();
+                    break;
+                case 4:
+                    Environment.Exit(0);
                     break;
             }
 
@@ -142,6 +146,7 @@ class Manager : person
             Console.WriteLine("[1]Hire Staff");
             Console.WriteLine("[2]Fire Staff");
             Console.WriteLine("[3]Assign Staff");
+            Console.WriteLine("[4]EXIT");
 
 
             choice = Convert.ToInt32(Console.ReadLine());
@@ -159,6 +164,10 @@ class Manager : person
                 case 3:
                     AssignStaff();
                     break;
+                case 4:
+                    Environment.Exit(0);
+                    break;
+
             }
         }
     }
@@ -194,7 +203,6 @@ class Manager : person
             pResidence = Console.ReadLine();
             Console.WriteLine(" Home Residence: ");
             hResidence = Console.ReadLine();
-
 
             sw.WriteLine("Full Name: {0} {1} {2} ", fName, mName, lName);
             sw.WriteLine("Age: " + Age);
