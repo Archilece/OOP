@@ -168,7 +168,4 @@ class superAdmin : person
         File.Delete(myPath);
         }
     }
-
-
-
 }

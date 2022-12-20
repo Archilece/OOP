@@ -14,7 +14,7 @@ class Staff : person
 
         if (!File.Exists("s" + staffID))
         {
-            Console.Write("Invalid Staff ID");
+            Console.WriteLine("Invalid Staff ID");
             staffStart();
         }
 
