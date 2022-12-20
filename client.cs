@@ -4,7 +4,7 @@ class client : person
     public void clientStart()
     {
         int choice = 0;
-        programStart pS = new programStart();
+        
         Manager mng = new Manager();
         Console.WriteLine("Welcome to Recoletos Massage Theraphy");
         Console.WriteLine("=====================================");
@@ -19,12 +19,10 @@ class client : person
             case 1:
                 createCAccount();
                 clientStart();
-                // requestService();
                 break;
             case 2:
                 payment();
                 clientStart();
-                // requestService();
                 break;
 
             case 3:
